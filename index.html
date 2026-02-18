@@ -5,124 +5,161 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hugo Klhen | Performance Digital</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- AOS Animation -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
-
 <style>
 body {
     font-family: 'Inter', sans-serif;
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #0f172a, #1e3a8a);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
 }
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
 }
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.glow-btn {
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.6);
+}
+.glow-btn:hover {
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.9);
+}
+.fade-in {
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+@keyframes fadeUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
 </style>
 
 </head>
-<body class="bg-slate-900 text-white">
+<body class="text-white">
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center justify-center text-center px-6 bg-gradient-to-br from-slate-900 to-slate-800">
+<section class="min-h-screen flex items-center justify-center text-center px-6">
 
-<div data-aos="fade-up">
-    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
-        Transforme visitantes em <span class="text-blue-500">clientes reais</span>
-    </h1>
+<div class="fade-in max-w-4xl">
 
-    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-        Criação de landing pages estratégicas e automações inteligentes para aumentar seu faturamento e posicionar sua empresa no topo do Google.
-    </p>
+<h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+Aumente seu faturamento com 
+<span class="text-blue-400">estratégia digital de alta conversão</span>
+</h1>
 
-    <a href="#contato" class="bg-blue-600 hover:bg-blue-700 transition duration-300 px-8 py-4 rounded-xl text-lg font-semibold shadow-lg">
-        Solicitar Orçamento
-    </a>
+<p class="text-lg md:text-xl text-gray-300 mb-10">
+Landing pages, Google Local e automações inteligentes para transformar visitantes em clientes todos os dias.
+</p>
+
+<a href="#contato" class="bg-blue-600 px-10 py-4 rounded-xl text-lg font-semibold transition duration-300 glow-btn">
+Solicitar Diagnóstico Gratuito
+</a>
+
 </div>
 
 </section>
 
 <!-- SERVIÇOS -->
-<section class="py-20 px-6 bg-slate-800">
+<section class="py-24 px-6">
+
 <div class="max-w-6xl mx-auto text-center">
 
-<h2 class="text-3xl md:text-4xl font-bold mb-12">Soluções para Escalar Seu Negócio</h2>
+<h2 class="text-3xl md:text-4xl font-bold mb-16">
+Soluções Estratégicas
+</h2>
 
 <div class="grid md:grid-cols-3 gap-10">
 
-<div data-aos="zoom-in" class="bg-slate-900 p-8 rounded-2xl shadow-lg hover:scale-105 transition duration-300">
+<div class="glass p-8 rounded-2xl hover:scale-105 transition duration-500">
 <h3 class="text-2xl font-semibold mb-4 text-blue-400">Landing Pages</h3>
 <p class="text-gray-300">
-Páginas focadas em conversão com design estratégico, carregamento rápido e estrutura preparada para anúncios.
+Páginas ultra rápidas, responsivas e preparadas para tráfego pago e SEO.
 </p>
 </div>
 
-<div data-aos="zoom-in" data-aos-delay="150" class="bg-slate-900 p-8 rounded-2xl shadow-lg hover:scale-105 transition duration-300">
+<div class="glass p-8 rounded-2xl hover:scale-105 transition duration-500">
 <h3 class="text-2xl font-semibold mb-4 text-blue-400">Google Local</h3>
 <p class="text-gray-300">
-Domine as buscas da sua região e apareça no topo do Google Maps com otimização estratégica.
+Apareça no topo do Google Maps e domine sua região.
 </p>
 </div>
 
-<div data-aos="zoom-in" data-aos-delay="300" class="bg-slate-900 p-8 rounded-2xl shadow-lg hover:scale-105 transition duration-300">
+<div class="glass p-8 rounded-2xl hover:scale-105 transition duration-500">
 <h3 class="text-2xl font-semibold mb-4 text-blue-400">Automações</h3>
 <p class="text-gray-300">
-Sistemas inteligentes que economizam tempo e organizam seus leads automaticamente.
+Sistemas inteligentes que organizam leads e escalam seu atendimento.
 </p>
 </div>
 
 </div>
 
 </div>
+
 </section>
 
 <!-- DIFERENCIAIS -->
-<section class="py-20 px-6 bg-slate-900 text-center">
+<section class="py-24 px-6">
 
-<h2 class="text-3xl md:text-4xl font-bold mb-12">Por que escolher nossa solução?</h2>
+<div class="max-w-5xl mx-auto glass p-12 rounded-3xl text-center">
 
-<div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-left">
+<h2 class="text-3xl md:text-4xl font-bold mb-10">
+Por que escolher nossa solução?
+</h2>
 
-<div data-aos="fade-right">
-<h3 class="text-xl font-semibold mb-2 text-green-400">⚡ Velocidade e Performance</h3>
-<p class="text-gray-400">Site leve, rápido e otimizado para evitar perda de clientes.</p>
+<div class="grid md:grid-cols-2 gap-8 text-left">
+
+<div>
+<h3 class="text-xl font-semibold text-green-400">⚡ Velocidade Extrema</h3>
+<p class="text-gray-300">Carregamento rápido para não perder clientes.</p>
 </div>
 
-<div data-aos="fade-left">
-<h3 class="text-xl font-semibold mb-2 text-green-400">🔒 Propriedade e Segurança</h3>
-<p class="text-gray-400">Certificado SSL e total controle do seu domínio.</p>
+<div>
+<h3 class="text-xl font-semibold text-green-400">🔒 Segurança Garantida</h3>
+<p class="text-gray-300">Certificado SSL e proteção total dos dados.</p>
 </div>
 
-<div data-aos="fade-right">
-<h3 class="text-xl font-semibold mb-2 text-green-400">📱 Design Responsivo</h3>
-<p class="text-gray-400">Perfeito para celular, onde estão 90% dos clientes.</p>
+<div>
+<h3 class="text-xl font-semibold text-green-400">📱 100% Responsivo</h3>
+<p class="text-gray-300">Experiência perfeita no celular.</p>
 </div>
 
-<div data-aos="fade-left">
-<h3 class="text-xl font-semibold mb-2 text-green-400">🤝 Suporte Disponível</h3>
-<p class="text-gray-400">Atendimento rápido e suporte estratégico contínuo.</p>
+<div>
+<h3 class="text-xl font-semibold text-green-400">🤝 Suporte Estratégico</h3>
+<p class="text-gray-300">Acompanhamento para crescimento contínuo.</p>
+</div>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- CONTATO -->
-<section id="contato" class="py-20 px-6 bg-slate-800 text-center">
+<!-- CTA FINAL -->
+<section id="contato" class="py-24 text-center">
 
-<h2 class="text-3xl md:text-4xl font-bold mb-6">
-Pronto para aumentar seu faturamento?
+<h2 class="text-4xl font-bold mb-6">
+Pronto para escalar seu negócio?
 </h2>
 
 <p class="text-gray-300 mb-8">
-Solicite um orçamento personalizado agora mesmo.
+Clique abaixo e receba um diagnóstico gratuito.
 </p>
 
 <a href="https://wa.me/5500000000000" 
-class="bg-green-500 hover:bg-green-600 transition duration-300 px-8 py-4 rounded-xl text-lg font-semibold shadow-lg">
+class="bg-green-500 px-10 py-4 rounded-xl text-lg font-semibold glow-btn transition duration-300">
 Falar no WhatsApp
 </a>
 
@@ -130,18 +167,9 @@ Falar no WhatsApp
 
 <!-- WhatsApp Flutuante -->
 <a href="https://wa.me/5500000000000" 
-class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-xl transition duration-300">
+class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-xl hover:scale-110 transition duration-300">
 📲
 </a>
-
-<!-- AOS Script -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-AOS.init({
-    duration: 800,
-    once: true
-});
-</script>
 
 </body>
 </html>
