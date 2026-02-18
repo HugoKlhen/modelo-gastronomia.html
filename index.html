@@ -5,190 +5,110 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hugo Klhen | Soluções Digitais</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-
-<!-- Tailwind -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Heroicons -->
-<script src="https://unpkg.com/heroicons@2.0.18/dist/heroicons.js"></script>
 
 <style>
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(-45deg, #0f172a, #0f2027, #134e4a, #0f172a);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    background: linear-gradient(135deg, #a8e6df, #c2e9f7, #e8f5f4);
+    background-size: 200% 200%;
+    animation: gradientMove 12s ease infinite;
+    overflow-x: hidden;
 }
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-}
-@keyframes gradientBG {
+h1,h2,h3 { font-family: 'Poppins', sans-serif; }
+
+@keyframes gradientMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
+/* Partículas */
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(0, 180, 150, 0.4);
+    border-radius: 50%;
+    animation: float 10s infinite linear;
+}
+
+@keyframes float {
+    from { transform: translateY(100vh); opacity: 0; }
+    to { transform: translateY(-10vh); opacity: 1; }
+}
+
 .glass {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.6);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
-.glow {
-    box-shadow: 0 0 20px rgba(20, 184, 166, 0.6);
+
+.glow-btn {
+    box-shadow: 0 0 15px rgba(0, 200, 180, 0.4);
 }
-.glow:hover {
-    box-shadow: 0 0 30px rgba(20, 184, 166, 0.9);
-}
-.fade-up {
-    animation: fadeUp 1s ease forwards;
-    opacity: 0;
-}
-@keyframes fadeUp {
-    from { transform: translateY(30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+.glow-btn:hover {
+    box-shadow: 0 0 25px rgba(0, 200, 180, 0.7);
 }
 </style>
 </head>
 
-<body class="text-white">
+<body class="text-gray-800 relative">
+
+<!-- Partículas -->
+<div class="particle" style="left:10%"></div>
+<div class="particle" style="left:30%; animation-delay:2s;"></div>
+<div class="particle" style="left:60%; animation-delay:4s;"></div>
+<div class="particle" style="left:80%; animation-delay:6s;"></div>
 
 <!-- HERO -->
 <section class="min-h-screen flex items-center justify-center text-center px-6">
 
-<div class="fade-up max-w-4xl">
+<div class="max-w-4xl">
 
-<h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-Alta Performance Digital para 
-<span class="text-teal-400">Escalar Seu Negócio</span>
+<h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+Alta Performance Digital para
+<span class="text-teal-600">Escalar Seu Negócio</span>
 </h1>
 
-<p class="text-lg md:text-xl text-gray-300 mb-10">
-Criação de landing pages estratégicas, Google Local e automações inteligentes para transformar visitantes em clientes todos os dias.
+<p class="text-lg md:text-xl text-gray-600 mb-10">
+Landing pages estratégicas, Google Local e automações inteligentes para transformar visitantes em clientes.
 </p>
 
-<a href="#contato" class="bg-teal-500 px-10 py-4 rounded-xl text-lg font-semibold transition duration-300 glow">
+<a href="#contato"
+class="bg-teal-500 text-white px-10 py-4 rounded-full text-lg font-semibold transition duration-300 glow-btn">
 Solicitar Diagnóstico Gratuito
 </a>
 
 </div>
-
 </section>
 
 <!-- SERVIÇOS -->
-<section class="py-24 px-6">
-
+<section class="py-20 px-6">
 <div class="max-w-6xl mx-auto text-center">
 
-<h2 class="text-3xl md:text-4xl font-bold mb-16">
+<h2 class="text-3xl md:text-4xl font-bold mb-14">
 Soluções Estratégicas
 </h2>
 
 <div class="grid md:grid-cols-3 gap-10">
 
-<div class="glass p-8 rounded-2xl hover:scale-105 transition duration-500">
-<div class="mb-4 text-teal-400">
-🔹
-</div>
-<h3 class="text-2xl font-semibold mb-4">Landing Pages</h3>
-<p class="text-gray-300">
-Páginas focadas em conversão, carregamento rápido e estrutura preparada para anúncios e SEO.
+<!-- Card -->
+<div class="glass p-8 hover:scale-105 transition duration-500">
+
+<!-- SVG Ícone Landing -->
+<svg class="w-12 h-12 mx-auto mb-4 text-teal-600" fill="none" stroke="currentColor" stroke-width="2"
+viewBox="0 0 24 24">
+<path stroke-linecap="round" stroke-linejoin="round"
+d="M3 4h18v16H3z"/>
+</svg>
+
+<h3 class="text-xl font-semibold mb-3">Landing Pages</h3>
+<p class="text-gray-600">
+Páginas rápidas, responsivas e focadas em conversão.
 </p>
 </div>
 
-<div class="glass p-8 rounded-2xl hover:scale-105 transition duration-500">
-<div class="mb-4 text-teal-400">
-📍
-</div>
-<h3 class="text-2xl font-semibold mb-4">Google Local</h3>
-<p class="text-gray-300">
-Domine as buscas da sua região e apareça no topo do Google Maps.
-</p>
-</div>
-
-<div class="glass p-8 rounded-2xl hover:scale-105 transition duration-500">
-<div class="mb-4 text-teal-400">
-⚙️
-</div>
-<h3 class="text-2xl font-semibold mb-4">Automações</h3>
-<p class="text-gray-300">
-Sistemas inteligentes para economizar tempo e escalar seu atendimento.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- DIFERENCIAIS -->
-<section class="py-24 px-6">
-
-<div class="max-w-5xl mx-auto glass p-12 rounded-3xl text-center">
-
-<h2 class="text-3xl md:text-4xl font-bold mb-10">
-Por que escolher nossa solução?
-</h2>
-
-<div class="grid md:grid-cols-2 gap-8 text-left">
-
-<div>
-<h3 class="text-xl font-semibold text-teal-400">⚡ Velocidade e Performance</h3>
-<p class="text-gray-300">Site leve, rápido e otimizado para conversão.</p>
-</div>
-
-<div>
-<h3 class="text-xl font-semibold text-teal-400">🔒 Propriedade e Segurança</h3>
-<p class="text-gray-300">Certificado SSL e controle total do seu projeto.</p>
-</div>
-
-<div>
-<h3 class="text-xl font-semibold text-teal-400">📱 Design Responsivo</h3>
-<p class="text-gray-300">Experiência perfeita no celular.</p>
-</div>
-
-<div>
-<h3 class="text-xl font-semibold text-teal-400">🤝 Suporte Disponível</h3>
-<p class="text-gray-300">Acompanhamento estratégico contínuo.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CTA FINAL -->
-<section id="contato" class="py-24 text-center">
-
-<h2 class="text-4xl font-bold mb-6">
-Pronto para escalar seu negócio?
-</h2>
-
-<p class="text-gray-300 mb-8">
-Clique abaixo e fale diretamente conosco.
-</p>
-
-<a href="https://wa.me/5500000000000" 
-class="bg-teal-500 px-10 py-4 rounded-xl text-lg font-semibold glow transition duration-300">
-Falar no WhatsApp
-</a>
-
-</section>
-
-<!-- WHATSAPP FLUTUANTE -->
-<a href="https://wa.me/5500000000000" 
-class="fixed bottom-6 right-6 bg-teal-500 p-4 rounded-full shadow-xl hover:scale-110 transition duration-300">
-💬
-</a>
-
-<!-- RODAPÉ -->
-<footer class="py-10 text-center text-gray-400 text-sm border-t border-gray-700 mt-16">
-<p><strong>Hugo Klhen Soluções Digitais</strong></p>
-<p>CNPJ: 00.000.000/0001-00</p>
-<p>© 2026 - Todos os direitos reservados</p>
-</footer>
-
-</body>
-</html>
+<
