@@ -131,6 +131,53 @@ body{
   box-shadow:0 20px 40px rgba(0,0,0,0.5);
 }
 
+/* =========================
+   (1) FRASES ENTRE MENU E CTA
+   ========================= */
+.highlights{
+  padding: 10px 20px 70px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.highlights__wrap{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.highlight__item{
+  background: rgba(255, 152, 0, 0.08); /* amarelo/laranja suave */
+  border: 1px solid rgba(255, 152, 0, 0.40);
+  border-radius: 16px;
+  padding: 14px 14px;
+  display:flex;
+  align-items:flex-start;
+  gap: 10px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.25);
+}
+
+.highlight__item p{
+  margin:0;
+  color:#fff;
+  font-size: 0.98rem;
+  line-height: 1.35;
+}
+
+.highlight__item .dot{
+  width:10px;
+  height:10px;
+  margin-top: 6px;
+  border-radius: 999px;
+  background:#ff9800; /* amarelo do site */
+  box-shadow: 0 0 0 4px rgba(255, 152, 0, 0.18);
+}
+
+@media (max-width: 900px){
+  .highlights{ padding-bottom: 55px; }
+  .highlights__wrap{ grid-template-columns: 1fr; }
+}
+
 /* REVEAL */
 .reveal{
   opacity:0;
@@ -173,6 +220,14 @@ footer{
   font-size:0.9rem;
 }
 
+/* (3) FRASE NO RODAPÉ */
+.footer__tagline{
+  margin: 0 0 10px;
+  color:#ff9800;
+  font-weight:700;
+  letter-spacing: .2px;
+}
+
 @keyframes fadeUp{
   from{opacity:0; transform:translateY(30px);}
   to{opacity:1; transform:translateY(0);}
@@ -213,7 +268,8 @@ footer{
     </div>
 
     <div class="menu-item">
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+      <!-- (2) IMAGEM DE SOBREMESA (atualizada) -->
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b">
       <div class="menu-item-content">
         <h3>Sobremesas</h3>
         <p>Doces artesanais para finalizar sua experiência.</p>
@@ -223,13 +279,34 @@ footer{
   </div>
 </section>
 
+<!-- (1) FRASES ENTRE O MENU E O BOTÃO WHATSAPP -->
+<section class="highlights">
+  <div class="highlights__wrap">
+    <div class="highlight__item">
+      <span class="dot"></span>
+      <p>Escolha o estilo ideal para o seu negócio.</p>
+    </div>
+
+    <div class="highlight__item">
+      <span class="dot"></span>
+      <p>Veja sua marca ganhar presença e autoridade digital.</p>
+    </div>
+
+    <div class="highlight__item">
+      <span class="dot"></span>
+      <p>Seu negócio merece um site com cara de empresa grande.</p>
+    </div>
+  </div>
+</section>
+
 <section class="cta">
   <h2>Peça Agora Pelo WhatsApp</h2>
   <a href="#">Fazer Pedido</a>
 </section>
 
 <footer>
-Modelo Gastronomia • Página Demonstrativa
+  <p class="footer__tagline">Soluções digitais para negócio locais</p>
+  Modelo Gastronomia • Página Demonstrativa
 </footer>
 
 <script>
