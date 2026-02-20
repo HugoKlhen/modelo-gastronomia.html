@@ -131,9 +131,7 @@ body{
   box-shadow:0 20px 40px rgba(0,0,0,0.5);
 }
 
-/* =========================
-   (1) FRASES ENTRE MENU E CTA
-   ========================= */
+/* FRASES ENTRE MENU E CTA */
 .highlights{
   padding: 10px 20px 70px;
   max-width: 1200px;
@@ -147,7 +145,7 @@ body{
 }
 
 .highlight__item{
-  background: rgba(255, 152, 0, 0.08); /* amarelo/laranja suave */
+  background: rgba(255, 152, 0, 0.08);
   border: 1px solid rgba(255, 152, 0, 0.40);
   border-radius: 16px;
   padding: 14px 14px;
@@ -169,7 +167,7 @@ body{
   height:10px;
   margin-top: 6px;
   border-radius: 999px;
-  background:#ff9800; /* amarelo do site */
+  background:#ff9800;
   box-shadow: 0 0 0 4px rgba(255, 152, 0, 0.18);
 }
 
@@ -199,7 +197,14 @@ body{
 
 .cta h2{
   font-size:2rem;
-  margin-bottom:20px;
+  margin-bottom:15px;
+}
+
+.cta p{
+  font-size:1rem; /* menor que o h2 */
+  max-width:700px;
+  margin:0 auto 25px;
+  color:#fff;
 }
 
 .cta a{
@@ -220,7 +225,6 @@ footer{
   font-size:0.9rem;
 }
 
-/* (3) FRASE NO RODAPÉ */
 .footer__tagline{
   margin: 0 0 10px;
   color:#ff9800;
@@ -268,7 +272,6 @@ footer{
     </div>
 
     <div class="menu-item">
-      <!-- (2) IMAGEM DE SOBREMESA (atualizada) -->
       <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b">
       <div class="menu-item-content">
         <h3>Sobremesas</h3>
@@ -279,7 +282,6 @@ footer{
   </div>
 </section>
 
-<!-- (1) FRASES ENTRE O MENU E O BOTÃO WHATSAPP -->
 <section class="highlights">
   <div class="highlights__wrap">
     <div class="highlight__item">
@@ -301,6 +303,7 @@ footer{
 
 <section class="cta">
   <h2>Peça Agora Pelo WhatsApp</h2>
+  <p>Me chame no WhatsApp e eu te envio uma proposta com prazo e condições. Ideal para restaurantes, hamburguerias, cafeterias e delivery.</p>
   <a href="#">Fazer Pedido</a>
 </section>
 
@@ -310,7 +313,6 @@ footer{
 </footer>
 
 <script>
-/* REVEAL */
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll(){
